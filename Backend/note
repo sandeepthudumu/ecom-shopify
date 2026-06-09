@@ -1,0 +1,48 @@
+
+    
+debugiing code
+
+    async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
+    try:
+        print("========== AUTH DEBUG START ==========")
+        print("TOKEN RECEIVED:", token)
+
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+
+        print("JWT PAYLOAD:", payload)
+
+        username = payload.get("sub")
+        user_id = payload.get("id")
+        user_role = payload.get("role")
+
+        print("USERNAME:", username)
+        print("USER ID:", user_id)
+        print("ROLE:", user_role)
+
+        if username is None or user_id is None:
+            print("ERROR: username or user_id missing")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="could not validate user"
+            )
+
+        print("========== AUTH DEBUG SUCCESS ==========")
+
+        return {
+            "username": username,
+            "id": user_id,
+            "user_role": user_role
+        }
+
+    except JWTError as e:
+        print("JWT ERROR:", str(e))
+        print("========== AUTH DEBUG FAILED ==========")
+
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="could not validate the user"
+        )

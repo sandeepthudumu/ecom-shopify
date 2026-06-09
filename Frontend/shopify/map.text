@@ -1,0 +1,27 @@
+src/
+ ├── api/
+ │   ├── axios.js
+ │   ├── authApi.js
+ │   ├── productApi.js
+ │   ├── cartApi.js
+ │   └── paymentApi.js
+ ├── context/
+ │   ├── AuthContext.jsx
+ │   └── CartContext.jsx
+ ├── components/
+ │   ├── Navbar.jsx
+ │   ├── Sidebar.jsx
+ │   ├── Footer.jsx
+ │   ├── ProductCard.jsx
+ │   └── ProtectedRoute.jsx
+ ├── layouts/
+ │   └── MainLayout.jsx
+ ├── pages/
+ │   ├── Products.jsx
+ │   ├── Cart.jsx
+ │   ├── Login.jsx
+ │   ├── Register.jsx
+ │   └── Payment.jsx
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css

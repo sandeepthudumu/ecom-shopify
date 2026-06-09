@@ -1,0 +1,17 @@
+folder structure
+fastapi_ecommerce_backend/
+│── app/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── auth.py
+│   ├── dependencies.py
+│   ├── routes/
+│   │   ├── user.py
+│   │   ├── product.py
+│   │   ├── cart.py
+│   │   ├── payment.py
+│
+│── .env
+│── requirements.txt
