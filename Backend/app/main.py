@@ -16,7 +16,9 @@ from app.routes import payment
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+       "https://ecom-shopify-ftkh4o033-sandeep-thudumus-projects.vercel.app",
+
 ]
 
 app.add_middleware(
