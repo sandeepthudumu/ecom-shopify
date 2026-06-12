@@ -24,7 +24,6 @@ function Products() {
 
       const res = await getProducts(search || "", category || "", page);
 
-console.log("PRODUCT RESPONSE:", res.data);
 
 if (Array.isArray(res.data)) {
   setProducts(res.data);
@@ -34,7 +33,6 @@ if (Array.isArray(res.data)) {
   setTotalPages(res.data.total_pages || 1);
 }
     } catch (error) {
-      console.log("PRODUCT ERROR:", error.response?.data || error.message);
       alert("Failed to fetch products");
     } finally {
       setLoading(false);
@@ -55,7 +53,6 @@ if (Array.isArray(res.data)) {
       await addToCart(productId, 1);
 window.dispatchEvent(new Event("cartUpdated"));
     } catch (error) {
-      console.log("ADD CART ERROR:", error.response?.data || error.message);
       alert("Please login before adding to cart");
     }
   };
