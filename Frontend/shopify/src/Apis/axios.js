@@ -10,7 +10,7 @@ const API = axios.create({
     // Instead of writing full URL every time,
     // Axios automatically adds this base URL
 
-    baseURL: "http://127.0.0.1:8000",
+baseURL: import.meta.env.VITE_API_BASE_URL,
     headers:{
         'Content-Type':'application/json'
     },
