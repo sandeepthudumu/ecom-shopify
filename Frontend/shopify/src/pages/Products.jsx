@@ -103,13 +103,18 @@ window.dispatchEvent(new Event("cartUpdated"));
       
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
-        {products.map((product) => (
-          <ProductCards
-            key={product.id}
-            product={product}
-            onAddToCart={handleAddToCart}
-          />
-        ))}
+       {products.map((product) => {
+  console.log("Rendering Product:", product);
+console.log("Products State:", products);
+console.log("Products Length:", products.length);
+  return (
+    <ProductCards
+      key={product.id}
+      product={product}
+      onAddToCart={handleAddToCart}
+    />
+  );
+})}
       </div>
 
       <Pagination
