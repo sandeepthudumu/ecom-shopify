@@ -10,7 +10,8 @@ const API = axios.create({
     // Instead of writing full URL every time,
     // Axios automatically adds this base URL
 
-baseURL: import.meta.env.VITE_API_BASE_URL,
+// baseURL: import.meta.env.VITE_API_BASE_URL,
+baseURL: "https://shopify-2p6e.onrender.com",
     headers:{
         'Content-Type':'application/json'
     },
