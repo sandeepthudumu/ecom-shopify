@@ -17,7 +17,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "https://ecom-shopify-ftkh4o033-sandeep-thudumus-projects.vercel.app",
+    "https://ecom-shopify-4tx52mwee-sandeep-thudumus-projects.vercel.app",
 ]
 
 app.add_middleware(
