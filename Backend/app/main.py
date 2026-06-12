@@ -17,18 +17,16 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-       "https://ecom-shopify-ftkh4o033-sandeep-thudumus-projects.vercel.app",
-
+    "https://ecom-shopify-ftkh4o033-sandeep-thudumus-projects.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 Base.metadata.create_all(bind=engine)
 
 app.include_router(product_router)
