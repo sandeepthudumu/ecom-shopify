@@ -162,4 +162,9 @@ sandeep kumar thudumu
 
 Full Stack Developer
 
-Technologies: react , fastapi ,sqllite
+Technologies:
+Frontend: React
+Backend: FastAPI
+Database: SQLite
+HTTP Client: Axios
+Authentication: JWT (JSON Web Tokens)
