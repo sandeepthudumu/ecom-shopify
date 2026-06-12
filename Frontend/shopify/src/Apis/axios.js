@@ -2,7 +2,7 @@ import axios from "axios"
 // Importing Axios library
 // Axios is used to make HTTP requests to backend APIs
 
-
+console.log("API URL:", import.meta.env.VITE_API_BASE_URL);
 
 const API = axios.create({
 
